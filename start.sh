@@ -11,12 +11,15 @@ set -e
 
 # TRUE is the lenght of $1 is zero
 
+# only for dev, remake process
+BASE_PATH="/home/will/Documents/DEV_SPACE/minecraft_BDE/"
+
 case "$1" in
 "live")
-    SERVER_DIR="/home/$(whoami)/minecraft_server/bedrock"
+    SERVER_DIR=$BASE_PATH"/servers_live/"
     ;;
 "dev")
-    SERVER_DIR="/home/$(whoami)/minecraft_server_DEV/bedrock"
+    SERVER_DIR=$BASE_PATH"/servers_dev/"
     ;;
 *)
     echo "Error: missing mode"
