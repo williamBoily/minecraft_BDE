@@ -1,0 +1,3 @@
+#ignore servers. those should be probably created outside of the repo
+servers_dev
+servers_live

@@ -12,7 +12,7 @@ set -e
 # TRUE is the lenght of $1 is zero
 
 # only for dev, remake process
-BASE_PATH="/home/will/Documents/DEV_SPACE/minecraft_BDE/"
+#BASE_PATH="/home/will/Documents/DEV_SPACE/minecraft_BDE/"
 BASE_PATH="$(pwd)"
 
 case "$1" in
