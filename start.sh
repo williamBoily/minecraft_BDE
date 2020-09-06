@@ -13,6 +13,7 @@ set -e
 
 # only for dev, remake process
 BASE_PATH="/home/will/Documents/DEV_SPACE/minecraft_BDE/"
+BASE_PATH="$(pwd)"
 
 case "$1" in
 "live")
@@ -72,6 +73,7 @@ echo "Starting world $WORLD_NAME"
 # --user $(id -u):$(id -g) set the user in the container as the one running the script.
 #   this allow the container to create files as the user and not root on the host via the volumes.
 # now, code assume the docker image exist
+# docker build -t wboily/minecraft_bds .
 docker run -d -it -p 19132:19132/udp --name minecraft_bds_$WORLD_NAME \
     -v "$WORLD_DIR/$WORLD_NAME:/opt/minecraft/worlds/$WORLD_NAME" \
     -v "$WORLD_DIR:/opt/minecraft/world_data" \
